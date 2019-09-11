@@ -176,7 +176,7 @@ public class Modules2MTBDD
 		JDDNode tmp, tmp2;
 		JDDVars ddv;
 		int i;
-		
+
 		// get variable info from ModulesFile
 		varList = modulesFile.createVarList();
 		if (modulesFile.containsUnboundedVariables())
@@ -196,6 +196,7 @@ public class Modules2MTBDD
 		sortDDVars();
 		sortIdentities();
 		sortRanges();
+
 		
 		// create stripped-down StateModelChecker for expression to MTBDD conversions
 		expr2mtbdd = new StateModelChecker(prism, varList, allDDRowVars, varDDRowVars, constantValues);
@@ -217,6 +218,14 @@ public class Modules2MTBDD
 			JDD.Deref(tmp);
 			allDDNondetVars.derefAll();
 			allDDNondetVars = ddv;
+
+
+			System.out.println("New code:");
+			System.out.println(ddv);
+			System.out.println(allDDRowVars);
+			System.out.println(allDDColVars);
+
+			System.out.println("End of DD Vars.");
 		}
 		
 // 		// print dd variables actually used (support of trans)
