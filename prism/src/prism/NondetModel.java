@@ -201,7 +201,6 @@ public class NondetModel extends ProbModel
 		allDDChoiceVars = achv;
 		System.out.println(achv);
 
-
 		allDDNondetVars = andv;
 		System.out.println(andv);
 
