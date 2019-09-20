@@ -935,3 +935,17 @@ JNIEXPORT jboolean JNICALL Java_jdd_JDD_DD_1GetErrorFlag(JNIEnv *env, jclass cls
 {
 	return DD_GetErrorFlag(ddman);
 }
+
+
+//------------------------------------------------------------------------------
+
+
+JNIEXPORT jboolean __jlongpointer JNICALL Java_jdd_JDDNode_DDN_1DumpDot(JNIEnv *env, jclass cls, jlong __jlongpointer dd)
+{
+
+	DdNode *node = jlong_to_DdNode(dd);
+
+	Cudd_DumpDot(mngr, num_nodes, node, NULL, NULL, filepointer);
+	fclose(filepointer);
+	return true;
+}

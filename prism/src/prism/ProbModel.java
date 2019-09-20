@@ -424,6 +424,11 @@ public class ProbModel implements Model
 	{
 		int i;
 
+		System.out.println("We are building a probabilistic model with the following:");
+		System.out.println("transitions: "+tr);
+		System.out.println("start: "+s);
+		System.out.println("End of new code");
+
 		trans = tr;
 		start = s;
 		deadlocks = null;

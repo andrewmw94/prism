@@ -39,6 +39,8 @@ public class JDDNode
 	protected static native long DDN_GetThen(long dd);
 	protected static native long DDN_GetElse(long dd);
 
+	protected static native long DDN_DumpDot(long dd);
+
 	static
 	{
 		try {
@@ -153,7 +155,11 @@ public class JDDNode
 	{
 		String result = "" + ptr;
 		if (ptr != 0) {
-			if (this.isConstant()) result += " value=" + this.getValue();
+			if (this.isConstant()) result += "\t\t value=" + this.getValue();
+			else {
+				result += "\n\t thenChild "+this.getThen().toString();
+				result += "\n\t elseChild "+this.getElse().toString();
+			}
 			result += " references=" + DebugJDD.getRefCount(this);
 		}
 		return result;
