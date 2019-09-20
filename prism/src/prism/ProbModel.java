@@ -426,12 +426,18 @@ public class ProbModel implements Model
 
 		System.out.println("We are building a probabilistic model with the following:");
 		System.out.println("transitions: "+tr);
+		System.out.println("We are outputing to file: "+"/home/awells/Development/prism_examples/tr.dot");
+		JDD.ExportDDToDotFile(tr, "/home/awells/Development/prism_examples/tr.dot");
 		System.out.println("start: "+s);
+		System.out.println("We are outputing to file: "+"/home/awells/Development/prism_examples/s.dot");
+		JDD.ExportDDToDotFile(s, "/home/awells/Development/prism_examples/s.dot");
 		System.out.println("End of new code");
 
 		trans = tr;
 		start = s;
 		deadlocks = null;
+
+		//We don't care about these:
 		stateRewards = sr;
 		transRewards = trr;
 		numRewardStructs = stateRewards.length; // which should == transRewards.length
@@ -443,6 +449,8 @@ public class ProbModel implements Model
 		moduleNames = mn;
 		moduleDDRowVars = mrv;
 		moduleDDColVars = mcv;
+
+		//we care about these
 		numVars = nv;
 		varList = vl;
 		varDDRowVars = vrv;

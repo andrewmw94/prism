@@ -683,7 +683,11 @@ JNIEXPORT void JNICALL Java_jdd_JDD_DD_1PrintVectorFiltered(JNIEnv *env, jclass 
 
 JNIEXPORT void JNICALL Java_jdd_JDD_DD_1ExportDDToDotFile(JNIEnv *env, jclass cls, jlong __jlongpointer dd, jstring filename)
 {
+    printf("Running the C++ half of the interface\n");
 	const char *str = env->GetStringUTFChars(filename, 0);
+	printf("File name: ");
+	printf(str);
+	printf("\n");
 	DD_ExportDDToDotFile(ddman, jlong_to_DdNode(dd), (char *)str);
 	env->ReleaseStringUTFChars(filename, str);
 }
@@ -934,18 +938,4 @@ JNIEXPORT jlongArray JNICALL Java_jdd_JDD_DebugJDD_1GetExternalRefCounts(JNIEnv 
 JNIEXPORT jboolean JNICALL Java_jdd_JDD_DD_1GetErrorFlag(JNIEnv *env, jclass cls)
 {
 	return DD_GetErrorFlag(ddman);
-}
-
-
-//------------------------------------------------------------------------------
-
-
-JNIEXPORT jboolean __jlongpointer JNICALL Java_jdd_JDDNode_DDN_1DumpDot(JNIEnv *env, jclass cls, jlong __jlongpointer dd)
-{
-
-	DdNode *node = jlong_to_DdNode(dd);
-
-	Cudd_DumpDot(mngr, num_nodes, node, NULL, NULL, filepointer);
-	fclose(filepointer);
-	return true;
 }

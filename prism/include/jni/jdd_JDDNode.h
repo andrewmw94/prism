@@ -47,6 +47,14 @@ JNIEXPORT jlong JNICALL Java_jdd_JDDNode_DDN_1GetThen
 JNIEXPORT jlong JNICALL Java_jdd_JDDNode_DDN_1GetElse
   (JNIEnv *, jclass, jlong);
 
+/*
+ * Class:     jdd_JDDNode
+ * Method:    DDN_DumpDot
+ * Signature: (J)J
+ */
+JNIEXPORT jlong JNICALL Java_jdd_JDDNode_DDN_1DumpDot
+  (JNIEnv *, jclass, jlong);
+
 #ifdef __cplusplus
 }
 #endif

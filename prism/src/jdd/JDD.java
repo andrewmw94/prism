@@ -1622,6 +1622,7 @@ public class JDD
 	 */
 	public static void ExportDDToDotFile(JDDNode dd, String filename)
 	{
+		System.out.println("We are running the java half of the interface");
 		DD_ExportDDToDotFile(dd.ptr(), filename);
 	}
 	
@@ -1631,6 +1632,7 @@ public class JDD
 	 */
 	public static void ExportDDToDotFileLabelled(JDDNode dd, String filename, List<String> varNames)
 	{
+		System.out.println("We are running the java half of the interface");
 		DD_ExportDDToDotFileLabelled(dd.ptr(), filename, varNames);
 	}
 	
