@@ -224,6 +224,7 @@ public class Modules2MTBDD
 			System.out.println(ddv);
 			System.out.println(allDDRowVars);
 			System.out.println(allDDColVars);
+			System.out.println("Num Modules: "+numModules);
 
 			System.out.println("End of DD Vars.");
 		}
