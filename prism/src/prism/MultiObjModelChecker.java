@@ -88,6 +88,10 @@ public class MultiObjModelChecker extends PrismComponent
 		long l = System.currentTimeMillis();
 		LTL2DA ltl2da = new LTL2DA(this);
 		dra[i] = ltl2da.convertLTLFormulaToDRA(ltl, modelChecker.getConstantValues());
+
+		System.out.println("Printing automata:");
+		dra[i].printHOA(System.out);
+
 		mainLog.print("DRA has " + dra[i].size() + " states, " + dra[i].getAcceptance().getSizeStatistics() + ".");
 		l = System.currentTimeMillis() - l;
 		mainLog.println("Time for Rabin translation: " + l / 1000.0 + " seconds.");

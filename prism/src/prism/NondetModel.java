@@ -190,21 +190,21 @@ public class NondetModel extends ProbModel
 	{
 		super(tr, s, sr, trr, rsn, arv, acv, mvdd, nm, mn, mrv, mcv, nv, vl, vrv, vcv, cv);
 
-		System.out.println("We are building a nondeterministic model; ");
-
+//		System.out.println("We are building a nondeterministic model; ");
+//
 		allDDSynchVars = asyv;
-		System.out.println(asyv);
-
+//		System.out.println(asyv);
+//
 		allDDSchedVars = asv;
-		System.out.println(asv);
-
+//		System.out.println(asv);
+//
 		allDDChoiceVars = achv;
-		System.out.println(achv);
-
+//		System.out.println(achv);
+//
 		allDDNondetVars = andv;
-		System.out.println(andv);
-
-		System.out.println("End new code");
+//		System.out.println(andv);
+//
+//		System.out.println("End new code");
 
 
 		transInd = null;

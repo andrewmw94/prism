@@ -364,14 +364,14 @@ public class ProbModel implements Model {
                      JDDVars[] mrv, JDDVars[] mcv, int nv, VarList vl, JDDVars[] vrv, JDDVars[] vcv, Values cv) {
         int i;
 
-        System.out.println("We are building a probabilistic model with the following:");
-        System.out.println("transitions: " + tr);
-        System.out.println("We are outputing to file: " + "/home/awells/Development/prism_examples/tr.dot");
-        JDD.ExportDDToDotFile(tr, "/home/awells/Development/prism_examples/tr.dot");
-        System.out.println("start: " + s);
-        System.out.println("We are outputing to file: " + "/home/awells/Development/prism_examples/s.dot");
-        JDD.ExportDDToDotFile(s, "/home/awells/Development/prism_examples/s.dot");
-        System.out.println("End of new code");
+//        System.out.println("We are building a probabilistic model with the following:");
+//        System.out.println("transitions: " + tr);
+//        System.out.println("We are outputing to file: " + "/home/awells/Development/prism_examples/tr.dot");
+//        JDD.ExportDDToDotFile(tr, "/home/awells/Development/prism_examples/tr.dot");
+//        System.out.println("start: " + s);
+//        System.out.println("We are outputing to file: " + "/home/awells/Development/prism_examples/s.dot");
+//        JDD.ExportDDToDotFile(s, "/home/awells/Development/prism_examples/s.dot");
+//        System.out.println("End of new code");
 
         trans = tr;
         start = s;
@@ -397,26 +397,26 @@ public class ProbModel implements Model {
         varDDColVars = vcv;
         constantValues = cv;
 
-        System.out.println("num vars: " + nv);
-        System.out.println("Row vars: " + vrv.length);
-        for (int j = 0; j < vrv.length; j++) {
-            System.out.println("Row vars " + j);
-            String fn = "varDDRowVar" + j;
-            JDD.ExportDDToDotFile(s, "/home/awells/Development/prism_examples/" + fn + ".dot");
-        }
-        if (vcv != null) {
-            System.out.println("Col vars: " + vcv.length);
-            for (int j = 0; j < vcv.length; j++) {
-                System.out.println("Col vars " + j);
-                String fn = "varDDColVar" + j;
-                JDD.ExportDDToDotFile(s, "/home/awells/Development/prism_examples/" + fn + ".dot");
-            }
-        }
-
-        System.out.println("VarList: "+vl.getNumVars());
-        for(int j = 0; j < vl.getNumVars(); j++) {
-            System.out.println("Var "+j+" name: "+vl.getName(j));
-        }
+//        System.out.println("num vars: " + nv);
+//        System.out.println("Row vars: " + vrv.length);
+//        for (int j = 0; j < vrv.length; j++) {
+//            System.out.println("Row vars " + j);
+//            String fn = "varDDRowVar" + j;
+//            JDD.ExportDDToDotFile(s, "/home/awells/Development/prism_examples/" + fn + ".dot");
+//        }
+//        if (vcv != null) {
+//            System.out.println("Col vars: " + vcv.length);
+//            for (int j = 0; j < vcv.length; j++) {
+//                System.out.println("Col vars " + j);
+//                String fn = "varDDColVar" + j;
+//                JDD.ExportDDToDotFile(s, "/home/awells/Development/prism_examples/" + fn + ".dot");
+//            }
+//        }
+//
+//        System.out.println("VarList: "+vl.getNumVars());
+//        for(int j = 0; j < vl.getNumVars(); j++) {
+//            System.out.println("Var "+j+" name: "+vl.getName(j));
+//        }
 
         // action label info (optional) is initially null
         transActions = null;

@@ -57,14 +57,14 @@ public class PrismMTBDD {
         setCUDDManager();
         setMainLog(mainLog);
         setTechLog(techLog);
-        System.out.println("We are running new code!");
+//        System.out.println("We are running new code!");
     }
 
     public static void closeDown() {
         // tidy up any JNI stuff
 
-        System.out.println("New code:");
-        System.out.println(JDD.GetCUDDManager());
+//        System.out.println("New code:");
+//        System.out.println(JDD.GetCUDDManager());
         PM_FreeGlobalRefs();
     }
 

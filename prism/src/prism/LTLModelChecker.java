@@ -159,6 +159,7 @@ public class LTLModelChecker extends PrismComponent
 	public LTLModelChecker(PrismComponent parent) throws PrismException
 	{
 		super(parent);
+		System.out.println("We are running our new code!!!");
 	}
 
 	/**

@@ -294,7 +294,7 @@ public class LTL2WDBA extends PrismComponent
 			}
 		}
 
-		//da.printHOA(System.out);
+		da.printHOA(System.out);
 
 		PowersetDA result = new PowersetDA();
 		result.nba = nba;
