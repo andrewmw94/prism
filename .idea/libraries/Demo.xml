@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Demo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/prism/ext/lp_solve_5.5_java/demo2/Demo.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

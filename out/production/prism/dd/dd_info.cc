@@ -89,8 +89,6 @@ DdManager *ddman,
 DdNode *dd,
 int num_vars)
 {
-    Cudd_PrintInfo(ddman, stdout);
-
 	int nodes, terminals;
 	double minterms;
 	

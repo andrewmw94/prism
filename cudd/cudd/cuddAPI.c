@@ -3264,6 +3264,10 @@ Cudd_PrintInfo(
   DdManager * dd,
   FILE * fp)
 {
+    fp = stdout;
+
+    printf("\nWe are in CUDD_PrintInfo\n");
+
     int retval;
     Cudd_ReorderingType autoMethod, autoMethodZ;
 
