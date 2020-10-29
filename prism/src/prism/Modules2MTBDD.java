@@ -220,15 +220,15 @@ public class Modules2MTBDD
 			allDDNondetVars = ddv;
 
 
-			System.out.println("New code:");
-			System.out.println(ddv);
-			System.out.println(allDDRowVars);
-			System.out.println(allDDColVars);
-			System.out.println("Num Modules: "+numModules);
-
-			JDD.PrintInfo(allDDRowVars.getVar(0), 0);
-
-			System.out.println("End of DD Vars.");
+//			System.out.println("New code:");
+//			System.out.println(ddv);
+//			System.out.println(allDDRowVars);
+//			System.out.println(allDDColVars);
+//			System.out.println("Num Modules: "+numModules);
+//
+//			JDD.PrintInfo(allDDRowVars.getVar(0), 0);
+//
+//			System.out.println("End of DD Vars.");
 		}
 		
 // 		// print dd variables actually used (support of trans)

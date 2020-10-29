@@ -1260,6 +1260,9 @@ public class NondetModelChecker extends NonProbModelChecker
 		l = System.currentTimeMillis() - l;
 		mainLog.println("Time for product construction: " + l / 1000.0 + " seconds.");
 		mainLog.println();
+		System.out.println("Printing CUDD info");
+		JDD.PrintInfo(allDDRowVars.getVar(0), 0);
+		System.out.println("End CUDD info");
 		modelProduct.printTransInfo(mainLog, prism.getExtraDDInfo());
 		// Output product, if required
 		if (prism.getExportProductTrans()) {
